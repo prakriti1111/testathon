@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #050505;
+  --color-accent: #00f2ff;
+  --color-purple: #7000ff;
+  --color-surface: #111111;
+  --color-accent: #00f2ff; /* Electric Cyan */
+  --color-purple: #9d00ff; /* Vivid Purple */
+}
+
+/* src/styles/globals.css */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #050505; /* Matches var(--color-bg) */
+  color: white;
+  overflow-x: hidden; /* Prevents horizontal shaking */
+}
+
+.lenis.lenis-smooth {
+  height: auto;
+}
+
+:root {
+  background-color: var(--color-bg);
+  color: white;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--color-accent), var(--color-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes move {
+  from { transform: translateY(0); }
+  to { transform: translateY(-40px); }
+}
+
+.bg-grid-move {
+  background-size: 40px 40px;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 0);
+  animation: move 2s linear infinite;
+}

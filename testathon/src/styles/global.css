@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0b0d10;
+  --color-surface: #12151b;
+  --color-primary: #5df2c6;
+  --color-secondary: #7aa2ff;
+  --color-text-muted: #9aa4b2;
+}
+
+/* Ensure the background is applied globally */
+@layer base {
+  body {
+    @apply bg-[--color-bg] text-white;
+    background-color: #0b0d10; /* Fallback */
+  }
+}
