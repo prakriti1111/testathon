@@ -24,10 +24,10 @@ export default function Tracks() {
             key={i} 
             className="group relative transition-all duration-500 ease-out hover:-translate-y-4 cursor-pointer"
           >
-            {/* 1. LAYERED UNDER-GLOW (More intense Cyan/Purple mix) */}
-            <div className="absolute -inset-1 bg-gradient-to-tr from-accent/40 via-purple-500/20 to-accent/40 rounded-[2.5rem] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            
+            <div className="absolute -inset-1 bg-linear-to-tr from-accent/40 via-purple-500/20 to-accent/40 rounded-[2.5rem] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
-            {/* 2. THE MAIN CARD (Higher Opacity Glass) */}
+            
             <div className="relative h-full p-8 rounded-[2.5rem] 
               bg-white/[0.08] backdrop-blur-3xl 
               border-2 border-white/20 
@@ -37,11 +37,11 @@ export default function Tracks() {
               transition-all duration-500 shadow-2xl"
             >
               
-              {/* TOP ACCENT: Shimmering Progress bar */}
-              <div className="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-accent via-white to-purple-500 group-hover:w-full transition-all duration-700 delay-100" />
+              
+              <div className="absolute top-0 left-0 h-[3px] w-0 bg-linear-to-r from-accent via-white to-purple-500 group-hover:w-full transition-all duration-700 delay-100" />
 
               <div>
-                {/* ID LABEL: High contrast monochromatic look */}
+                
                 <div className="flex justify-between items-start mb-10">
                   <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center group-hover:rotate-[10deg] group-hover:scale-110 transition-all duration-500">
                     <div className="w-3 h-3 bg-accent rounded-full shadow-[0_0_15px_#00f2ff]" />
@@ -60,7 +60,6 @@ export default function Tracks() {
                 </p>
               </div>
 
-              {/* INTERACTIVE FOOTER: Micro-animation */}
               <div className="mt-12 pt-6 border-t border-white/10 flex justify-between items-center overflow-hidden">
                 <span className="text-[10px] font-bold tracking-[0.3em] text-gray-400 group-hover:text-white uppercase translate-y-0 transition-transform">
                   Access_Directives
@@ -73,8 +72,7 @@ export default function Tracks() {
                 </div>
               </div>
 
-              {/* DYNAMIC SHINE: Moves with hover (Simulation) */}
-              <div className="absolute -inset-full bg-gradient-to-tr from-white/0 via-white/[0.05] to-white/0 rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 pointer-events-none" />
+              <div className="absolute -inset-full bg-linear-to-tr from-white/0 via-white/[0.05] to-white/0 rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 pointer-events-none" />
             </div>
           </div>
         ))}

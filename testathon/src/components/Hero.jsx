@@ -6,7 +6,7 @@ export default function Hero() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      /* -------- TEXT ENTRANCE -------- */
+      
       gsap.from(".hero-reveal", {
         y: 80,
         opacity: 0,
@@ -16,14 +16,12 @@ export default function Hero() {
         delay: 0.5
       })
 
-      /* -------- LARGE 3D ASTEROIDS -------- */
       const asteroids = gsap.utils.toArray(".asteroid-item")
 
       asteroids.forEach((ast) => {
         const angle = Math.random() * Math.PI * 2
         const depth = Math.random()
 
-        // Distances
         const startRadius = 1600
         const endRadius = 400 
 
@@ -32,7 +30,6 @@ export default function Hero() {
         const endX = Math.cos(angle) * endRadius
         const endY = Math.sin(angle) * endRadius
 
-        // 🔥 INCREASED SCALE: Start huge, end solid
         const startScale = 4.0 + depth * 3.0   
         const endScale = 0.5 
 
@@ -65,7 +62,7 @@ export default function Hero() {
             scale: endScale, 
             autoAlpha: 1,
             filter: "blur(0px)",
-            duration: 0.6 + depth * 0.4, // Slower duration = more visibility
+            duration: 0.6 + depth * 0.4, 
             ease: "power2.in",
           }
         ).to(ast, {
@@ -94,10 +91,10 @@ export default function Hero() {
       id="hero"
       className="relative h-screen overflow-hidden bg-[#020408] text-white flex items-center justify-center perspective-[1500px]"
     >
-      {/* BACKGROUND DECORATIVE RINGS */}
+
       <div className="absolute w-[800px] h-[800px] border border-cyan-500/20 rounded-full animate-pulse pointer-events-none" />
 
-      {/* ASTEROID FIELD */}
+      
       <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
         {Array.from({ length: 60 }).map((_, i) => (
           <div
@@ -106,7 +103,7 @@ export default function Hero() {
             style={{ transformStyle: "preserve-3d" }}
           >
             <div className="relative">
-              {/* 🔥 LARGER SHARD: 16px width instead of 8px */}
+              
               <div 
                 className="w-[16px] h-[24px] bg-white shadow-[0_0_40px_rgba(255,255,255,0.8),0_0_20px_rgba(34,211,238,0.5)]" 
                 style={{
@@ -114,14 +111,14 @@ export default function Hero() {
                   background: 'linear-gradient(135deg, #ffffff 0%, #a1a1aa 50%, #3f3f46 100%)'
                 }}
               />
-              {/* 🔥 THICKER TRAIL */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[3px] h-40 bg-gradient-to-t from-transparent via-cyan-500/50 to-white blur-[2px] opacity-60" />
+              
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[3px] h-40 bg-linear-to-t from-transparent via-cyan-500/50 to-white blur-[2px] opacity-60" />
             </div>
           </div>
         ))}
       </div>
 
-      {/* CONTENT */}
+      
       <div className="relative z-10 text-center max-w-4xl px-6">
         <div className="hero-reveal inline-block px-4 py-1 border border-cyan-500/30 rounded-full mb-6 bg-cyan-500/5">
           <h2 className="text-[10px] tracking-[0.6em] text-cyan-400 font-mono uppercase">
@@ -131,7 +128,7 @@ export default function Hero() {
 
         <h1 className="hero-reveal text-7xl md:text-9xl font-black italic tracking-tighter mb-6 leading-none">
           TESTA
-          <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
             THON
           </span>
         </h1>

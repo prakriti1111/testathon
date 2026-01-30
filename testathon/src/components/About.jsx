@@ -10,7 +10,7 @@ export default function About() {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      // 1. Text Entrance with "Float-up"
+     
       gsap.from(".about-text-element", {
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -24,7 +24,7 @@ export default function About() {
         ease: "power4.out"
       });
 
-      // 2. Parallax Scroll Effect for the Visual Card
+      
       gsap.to(".about-visual", {
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -32,11 +32,11 @@ export default function About() {
           end: "bottom top",
           scrub: 1
         },
-        y: -60, // Moves slower than scroll for depth
+        y: -60, 
         rotationZ: -2
       });
 
-      // 3. Shimmer Line Animation
+      
       gsap.to(".shimmer-line", {
         x: "200%",
         duration: 2,
@@ -48,7 +48,7 @@ export default function About() {
     return () => ctx.revert();
   }, []);
 
-  // Magnetic/Tilt Hover Effect for the Visual Card
+  
   const handleMouseMove = (e) => {
     const { clientX, clientY } = e;
     const { left, top, width, height } = visualRef.current.getBoundingClientRect();
@@ -56,8 +56,8 @@ export default function About() {
     const y = (clientY - top) / height - 0.5;
 
     gsap.to(visualRef.current, {
-      rotationY: x * 15, // Tilt on Y axis
-      rotationX: -y * 15, // Tilt on X axis
+      rotationY: x * 15, 
+      rotationX: -y * 15, 
       transformPerspective: 1000,
       ease: "power2.out",
       duration: 0.6
@@ -81,7 +81,7 @@ export default function About() {
     >
       <div className="max-w-7xl w-full grid md:grid-cols-2 gap-12 md:gap-20 items-center">
         
-        {/* TEXT CONTENT */}
+       
         <div className="z-10">
           <h2 className="about-text-element text-5xl md:text-7xl font-black italic mb-8 uppercase tracking-tighter leading-none">
             Pushing <br/> 
@@ -101,32 +101,30 @@ export default function About() {
           </div>
         </div>
 
-        {/* UPGRADED VISUAL CONTENT */}
         <div 
           ref={visualRef}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           className="about-visual relative h-[450px] md:h-[550px] w-full glass rounded-[2.5rem] border border-white/10 flex items-center justify-center overflow-hidden group shadow-2xl transition-shadow hover:shadow-accent/10"
         >
-          {/* Shimmering Border Overlay */}
+          
           <div className="absolute inset-0 pointer-events-none rounded-[2.5rem] overflow-hidden">
             <div className="shimmer-line absolute top-0 left-[-100%] w-full h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent"></div>
           </div>
 
           <div className="relative w-full h-full flex items-center justify-center pointer-events-none">
             
-            {/* The "Neural Core" */}
             <div className="w-56 h-56 rounded-full border border-accent/20 flex items-center justify-center">
                 <div className="w-44 h-44 rounded-full border-2 border-accent/40 flex items-center justify-center animate-[spin_15s_linear_infinite]">
-                    {/* Floating Orbs */}
+                    
                     <div className="absolute top-0 w-3 h-3 bg-accent rounded-full shadow-[0_0_15px_#00f2ff]"></div>
                     <div className="absolute bottom-0 w-3 h-3 bg-purple-500 rounded-full shadow-[0_0_15px_#7000ff]"></div>
                 </div>
-                {/* Central Glow */}
+                
                 <div className="absolute w-24 h-24 bg-accent/20 blur-[40px] rounded-full animate-pulse"></div>
             </div>
 
-            {/* Floating HUD Cards */}
+           
             <div className="absolute top-10 right-10 p-5 glass rounded-2xl border-white/10 backdrop-blur-2xl group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform duration-500">
               <p className="text-[10px] font-mono text-accent mb-2">OS_VERSION: 4.2.0</p>
               <div className="flex gap-1">
@@ -141,14 +139,12 @@ export default function About() {
               <p className="text-3xl font-black font-mono tracking-tighter">048:<span className="text-accent animate-pulse">00</span>:00</p>
             </div>
 
-            {/* Decorative Grid Overlay */}
             <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
           </div>
         </div>
 
       </div>
 
-      {/* Background Floating Blob */}
       <div className="absolute -bottom-20 -right-20 w-[500px] h-[500px] bg-purple-500/10 blur-[120px] -z-10 rounded-full animate-pulse"></div>
     </section>
   );
