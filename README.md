@@ -13,11 +13,14 @@ Testathon is a premium, high-performance landing page designed for a 48-hour inn
 
 ## 🚀 Key Features
 
-### 1. Kinetic Asteroid Shower (Hero Section)
-A cinematic Hero header featuring **60+ programmatically generated asteroids like structure** converging toward a central impact zone.
-- **3D Perspective:** Utilizes CSS `perspective` and GSAP `z-axis` movement.
-- **Dynamic Scaling:** Asteroids start **massive at distance** and dynamically shrink as they approach the foreground
-- **Motion Blur:** Blur-to-sharp transition to simulate high-velocity atmospheric entry
+### 🎬 Advanced Animations
+
+- Scroll-triggered animations using GSAP ScrollTrigger
+- Staggered entrance effects for text and elements
+- Parallax scrolling on visual elements
+- 3D tilt effects with mouse tracking
+- Smooth page transitions with Lenis smooth scroll
+- Timeline progression with animated vertical line
 
 ### 2. High-Contrast Glassmorphism
 - **Depth:** Layered `backdrop-blur-3xl` with `bg-white/[0.08]`.
@@ -29,7 +32,7 @@ A cinematic Hero header featuring **60+ programmatically generated asteroids lik
 - **Interactive Buttons:** Consistent "Get Started" hover states across the portal using CSS translation layers.
 
 ### 4. Advanced Smooth Scrolling (Lenis + GSAP)
-- **Momentum Scroll:** Integrated Lenis for a luxurious, weighty feel during navigation.
+- **Momentum Scroll:** Integrated Lenis for a smooth, weighty feel during navigation.
 - **Programmatic Interception:** Custom `handleScroll` logic in the Navbar to prevent "teleporting" and ensure smooth transitions to target IDs.
 
 ---
