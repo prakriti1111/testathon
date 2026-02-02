@@ -5,17 +5,17 @@
   --color-accent: #00f2ff;
   --color-purple: #7000ff;
   --color-surface: #111111;
-  --color-accent: #00f2ff; /* Electric Cyan */
-  --color-purple: #9d00ff; /* Vivid Purple */
+  --color-accent: #00f2ff; 
+  --color-purple: #9d00ff; 
 }
 
-/* src/styles/globals.css */
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #050505; /* Matches var(--color-bg) */
+  background-color: #050505; 
   color: white;
-  overflow-x: hidden; /* Prevents horizontal shaking */
+  overflow-x: hidden; 
 }
 
 .lenis.lenis-smooth {

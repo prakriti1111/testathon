@@ -5,12 +5,12 @@ import { useEffect } from 'react'
 export default function useLenis() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.5, // Increase this for slower, more "luxurious" scrolling
+      duration: 1.5, 
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
       smoothWheel: true,
     })
 
-    // Attach to window so other components can find it
+    
     window.lenis = lenis;
 
     function raf(time) {
