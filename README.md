@@ -7,25 +7,26 @@
 
 Testathon is a premium, high-performance landing page designed for a 48-hour innovation sprint. Built with a "Cyber-Storm" aesthetic, it features advanced 3D kinetic animations, smooth momentum scrolling, and high-contrast glassmorphism.
 
+## 🔗 **Live Demo:** https://testathon.vercel.app
+
 ---
 
 ## 🚀 Key Features
 
-### 1. Kinetic Thunderbolt Storm (Hero Section)
-A high-impact Hero header featuring **80+ programmatically generated thunderbolts**. 
+### 1. Kinetic Asteroid Shower (Hero Section)
+A cinematic Hero header featuring **60+ programmatically generated asteroids like structure** converging toward a central impact zone.
 - **3D Perspective:** Utilizes CSS `perspective` and GSAP `z-axis` movement.
-- **Dynamic Scaling:** Bolts start at 15x scale and diminish as they approach the center "impact zone."
-- **Electric Flicker:** Real-time opacity jitter using GSAP rough easing to simulate electrical surges.
+- **Dynamic Scaling:** Asteroids start **massive at distance** and dynamically shrink as they approach the foreground
+- **Motion Blur:** Blur-to-sharp transition to simulate high-velocity atmospheric entry
 
 ### 2. High-Contrast Glassmorphism
-All interactive elements (Cards, Navbar, Footer) utilize a custom "Tactical Glass" design:
 - **Depth:** Layered `backdrop-blur-3xl` with `bg-white/[0.08]`.
 - **Lighting:** Double-border logic with shimmering top-accents to catch virtual light.
 - **Bloom:** Intense under-glow effects that activate on hover to distinguish content from the deep-space background.
 
 ### 3. Synchronized Branding
 - **Gradient Continuity:** A unified `Cyan-to-Purple` linear gradient applied across the Hero text, Navbar logo, and animated progress lines.
-- **Interactive Buttons:** Consistent "Fill-up" hover states across the portal using CSS translation layers.
+- **Interactive Buttons:** Consistent "Get Started" hover states across the portal using CSS translation layers.
 
 ### 4. Advanced Smooth Scrolling (Lenis + GSAP)
 - **Momentum Scroll:** Integrated Lenis for a luxurious, weighty feel during navigation.
@@ -39,6 +40,8 @@ All interactive elements (Cards, Navbar, Footer) utilize a custom "Tactical Glas
 - **Animation:** GSAP (GreenSock Animation Platform)
 - **Styling:** Tailwind CSS
 - **Scrolling:** Lenis Smooth Scroll
+- **Deployment:** Vercel
+
 
 ---
 
